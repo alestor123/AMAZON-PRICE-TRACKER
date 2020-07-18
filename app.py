@@ -12,3 +12,13 @@ response = requests.get('https://www.amazon.in/Lenovo-L22e-20-Monitor-Display-in
 soup = BeautifulSoup(response.content, 'html.parser')
 # change the encoding to utf-8
 soup.encode('utf-8')
+def check_price():
+  title = soup.find(id= "productTitle").get_text()
+  price = soup.find(id = "priceblock_ourprice").get_text().replace(',', '').replace('₹', '').replace(' ', '').strip()
+  print(price+"₹")
+
+  #converting the string amount to float
+  converted_price = float(price[0:5])
+  print(converted_price)
+  #using strip to remove extra spaces in the title
+  print(title.strip())
