@@ -22,3 +22,6 @@ def check_price():
   print(converted_price)
   #using strip to remove extra spaces in the title
   print(title.strip())
+while(True):
+  check_price()
+  time.sleep(60 * 60)
