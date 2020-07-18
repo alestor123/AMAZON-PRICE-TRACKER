@@ -23,5 +23,5 @@ def check_price():
   #using strip to remove extra spaces in the title
   print(title.strip())
 while(True):
-  check_price()
-  time.sleep(60 * 60)
+  check_price()#caalling check_price() function
+  time.sleep(60 * 60)#setting delay
