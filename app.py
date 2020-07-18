@@ -8,3 +8,5 @@ headers = {
 }
 # send a request to fetch HTML of the page
 response = requests.get('https://www.amazon.in/Lenovo-L22e-20-Monitor-Display-inputs/dp/B07SGDWMCG/ref=sr_1_1?dchild=1&keywords=monitor+lenovo&qid=1595088224&s=electronics&sr=1-1', headers=headers)
+# create the soup object
+soup = BeautifulSoup(response.content, 'html.parser')
